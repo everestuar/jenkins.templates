@@ -12,7 +12,7 @@ void call(Map params){
 
     def app_name = repo.split('/').last()
 
-    node("master") {
+    node("built-in") {
         stage('Replicate to second region') {
             sh "echo ${repo}"
         }
