@@ -1,0 +1,8 @@
+def prevent_build = false
+withFolderProperties {
+    prevent_build = env.PREVENT_BUILD == 'true'
+}
+
+if(!prevent_build) {
+    tag = build()
+}
