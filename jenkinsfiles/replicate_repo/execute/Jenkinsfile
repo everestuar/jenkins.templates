@@ -1,5 +1,0 @@
-execute (
-    version: params.VERSION,
-    environment: params.ENVIRONMENT,
-    namespace: params.NAMESPACE
-)
