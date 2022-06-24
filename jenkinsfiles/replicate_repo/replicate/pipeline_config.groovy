@@ -1,0 +1,3 @@
+libraries {
+    replicate_repo
+}
