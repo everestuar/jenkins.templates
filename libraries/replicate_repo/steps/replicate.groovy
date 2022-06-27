@@ -16,13 +16,13 @@ void call(Map params){
         stage('Replicate to second region') {
             sh "echo ${repo}"
             sh "echo ${repo_name}"
+            sh "pwd"
             sh "rm -rf LocalRepository"
-            sh "mkdir /LocalRepository"
             sh "git clone --mirror codecommit::us-east-2://${repo_name} LocalRepository"
             sh "pwd"
             sh "ls -ltr"
 
-            dir("/LocalRepository"){
+            dir("LocalRepository"){
                 sh "ls"
             }
 
