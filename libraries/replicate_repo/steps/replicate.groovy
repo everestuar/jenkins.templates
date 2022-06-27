@@ -24,9 +24,16 @@ void call(Map params){
 
             dir("LocalRepository"){
                 sh "ls"
+                sh "git remote set-url --push origin codecommit::us-west-2://${repo_name}"
+                sh "git fetch -p origin"
+                sh "git push --mirror --follow-tags"
             }
+        }
 
-
+        stage("Replicate to second account") {
+            sh "echo ${repo}"
+            sh "echo ${repo_name}"
+            sh "pwd"
         }
     }
 
