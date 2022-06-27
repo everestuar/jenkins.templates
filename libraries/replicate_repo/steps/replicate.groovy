@@ -20,6 +20,8 @@ void call(Map params){
             sh "git clone --mirror codecommit::us-east-2://${repo_name} LocalRepository"
             sh "pwd"
             sh "ls"
+            sh "cd LocalRepository"
+            sh "ls"
             
             dir("/LocalRepository"){
                 sh "ls"
