@@ -15,6 +15,7 @@ void call(Map params){
     node("built-in") {
         stage('Replicate to second region') {
             sh "echo ${repo}"
+            sh "echo ${WORKSPACE}"
         }
     }
 
