@@ -10,15 +10,14 @@ void call(Map params){
         repo = env.REPO
     }
 
-    def app_name = repo.split('/').last()
+    def repo_name = repo.split('/').last()
 
     node("built-in") {
         stage('Replicate to second region') {
-            sh "echo ${repo}"            
-
-            dir(){
-                sh "echo ${WORKSPACE}"
-            }
+            sh "echo ${repo}"
+            sh "echo ${repo_name}"
+            sh "git clone --mirror codecommit::us-east-2://${repo_name} LocalRepository"
+            
 
 
         }
