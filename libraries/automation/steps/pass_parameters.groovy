@@ -23,6 +23,9 @@ void call(Map params){
                 sh "echo \"Run Environment: ${run_environment}\""
                 sh "echo \"Payload: ${payload}\""
 
+                def jsonObj = readJSON text: "${payload}"
+                echo "$jsonObj"
+
                 // dir("LocalRepository") {
                 //     sh "ls"
                 //     sh "git remote set-url --push origin codecommit::us-west-2://${repo_name}"
