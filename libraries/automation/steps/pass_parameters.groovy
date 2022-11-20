@@ -25,6 +25,9 @@ void call(Map params){
 
                 def jsonObj = readJSON text: "${payload}"
                 echo "$jsonObj"
+                jsonObj.each { key, value ->
+                    echo "Walked through key $key and value $value"
+                }
 
                 // dir("LocalRepository") {
                 //     sh "ls"
