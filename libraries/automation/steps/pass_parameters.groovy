@@ -16,10 +16,10 @@ void call(Map params){
     node("built-in") {
         try {
             stage('Print parameters') {
-                sh "echo \"Repo ${repo}\""
+                sh "echo \"Repo: ${repo}\""
                 sh "echo ${repo_name}"
-                sh "echo ${namespace}"
-                sh "echo ${payload}"
+                sh "echo \"Namespace: ${namespace}\""
+                sh "echo \"Payload: ${payload}\""
 
                 // dir("LocalRepository") {
                 //     sh "ls"
