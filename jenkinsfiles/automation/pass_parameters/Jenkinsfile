@@ -2,5 +2,6 @@ pass_parameters (
     version: params.VERSION,
     environment: params.ENVIRONMENT,
     namespace: params.NAMESPACE,
+    run_environment: params.RUN_ENVIRONMENT,
     payload: params.PAYLOAD
 )

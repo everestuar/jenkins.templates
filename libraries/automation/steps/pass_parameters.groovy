@@ -2,6 +2,7 @@ void call(Map params){
     def version = params.version
     def environment = params.environment ?: 'sandbox'
     def namespace = params.namespace ?: 'develop'
+    def run_environment = params.run_environment ?: 'test'
     def payload = params.payload ?: ''
 
     def repo = ""
@@ -19,6 +20,7 @@ void call(Map params){
                 sh "echo \"Repo: ${repo}\""
                 sh "echo ${repo_name}"
                 sh "echo \"Namespace: ${namespace}\""
+                sh "echo \"Run Environment: ${run_environment}\""
                 sh "echo \"Payload: ${payload}\""
 
                 // dir("LocalRepository") {
