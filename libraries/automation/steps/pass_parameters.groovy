@@ -16,7 +16,7 @@ void call(Map params){
     node("built-in") {
         try {
             stage('Print parameters') {
-                sh "echo ${repo}"
+                sh "echo \"Repo ${repo}\""
                 sh "echo ${repo_name}"
                 sh "echo ${namespace}"
                 sh "echo ${payload}"
